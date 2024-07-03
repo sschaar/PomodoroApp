@@ -2,10 +2,29 @@ package com.example.pomodoro.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val LightPrimary = Color(0xFF6200EE)
-val LightPrimaryVariant = Color(0xFF3700B3)
-val LightSecondary = Color(0xFF03DAC6)
+val Black = Color(0xFF000000)
+val DarkGray = Color(0xFF121212)
+val White = Color(0xFFFFFFFF)
+val LightGray = Color(0xFFB0BEC5)
 
-val DarkPrimary = Color(0xFFBB86FC)
-val DarkPrimaryVariant = Color(0xFF3700B3)
-val DarkSecondary = Color(0xFF03DAC6)
+val md_theme_light_primary = Black
+val md_theme_light_primaryContainer = LightGray
+val md_theme_light_secondary = DarkGray
+val md_theme_light_secondaryContainer = LightGray
+val md_theme_light_background = White
+val md_theme_light_surface = White
+val md_theme_light_onPrimary = White
+val md_theme_light_onSecondary = Black
+val md_theme_light_onBackground = Black
+val md_theme_light_onSurface = Black
+
+val md_theme_dark_primary = White
+val md_theme_dark_primaryContainer = DarkGray
+val md_theme_dark_secondary = LightGray
+val md_theme_dark_secondaryContainer = DarkGray
+val md_theme_dark_background = Black
+val md_theme_dark_surface = Black
+val md_theme_dark_onPrimary = Black
+val md_theme_dark_onSecondary = White
+val md_theme_dark_onBackground = White
+val md_theme_dark_onSurface = White

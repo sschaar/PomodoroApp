@@ -40,25 +40,27 @@ class MainActivity : ComponentActivity() {
 fun Home() {
     var isDarkTheme by remember { mutableStateOf(false) }
 
-    PomodoroTheme {
+    PomodoroTheme(darkTheme = isDarkTheme) {
         Surface(
             color = MaterialTheme.colorScheme.background,
             modifier = Modifier.fillMaxSize()
         ) {
             Column(modifier = Modifier.padding(16.dp)) {
-                Text(text = "Hello, World!")
+                Text(text = "Hello, World!", color = MaterialTheme.colorScheme.onSurface)
                 Switch(
                     checked = isDarkTheme,
                     onCheckedChange = { isDarkTheme = it },
                     colors = SwitchDefaults.colors(
-                    checkedThumbColor = MaterialTheme.colorScheme.primary,
-                    checkedTrackColor = MaterialTheme.colorScheme.primaryContainer,
-                    uncheckedThumbColor = MaterialTheme.colorScheme.secondary,
-                    uncheckedTrackColor = MaterialTheme.colorScheme.secondaryContainer,
+                        checkedThumbColor = MaterialTheme.colorScheme.primary,
+                        checkedTrackColor = MaterialTheme.colorScheme.primaryContainer,
+                        uncheckedThumbColor = MaterialTheme.colorScheme.secondary,
+                        uncheckedTrackColor = MaterialTheme.colorScheme.secondaryContainer,
+                    )
                 )
+                Text(
+                    text = if (isDarkTheme) "Dark Mode" else "Light Mode",
+                    color = MaterialTheme.colorScheme.onSurface
                 )
-                Text(text = if (isDarkTheme) "Dark Mode" else "Light Mode")
-
             }
         }
     }
